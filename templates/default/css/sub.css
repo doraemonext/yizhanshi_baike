@@ -1,0 +1,56 @@
+body {
+    position: relative;
+}
+#main {
+    padding-bottom: 40px;
+}
+#content li {
+	height: 55px;
+	padding-top: 26px;
+	border-bottom: 1px solid #a0a0a0;
+}
+.brief {
+	font-size: 100%;
+}
+.time {
+	font-size: 95%;
+	color: #707070;
+	margin: 9px 0;
+}
+#backtotop a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url("../image/backtotop.png") no-repeat;
+    position: absolute;
+    zoom: 1;
+    bottom: 36px;
+    right: -80px;
+    z-index: 9999;
+}
+#nav-foot {
+    margin: 40px auto;
+    width: 210px;
+}
+#nav-foot ul {
+    list-style: none;
+}
+#nav-foot li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin-left: -4px;
+    *margin-left: 0;
+    text-align: center;
+    margin-right: 5px;
+    vertical-align: top;
+}
+#nav-foot a {
+    display: block;
+    font-size: 90%;
+    line-height: 24px;
+}
+#current {
+    font-size: 110%;
+    color: #2185c5;
+}

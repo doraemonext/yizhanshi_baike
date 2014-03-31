@@ -1,0 +1,51 @@
+#heading {
+    padding-top: 25px;
+    border-bottom: 1px solid #a0a0a0;
+}
+#brief, #time {
+    text-align: center;
+}
+#brief {
+    font-size: 150%;
+    color: #434343;
+    margin-bottom: 22px
+}
+#time {
+    padding-bottom: 15px;
+}
+#time span {
+    font-size: 90%;
+    color: #707070;
+}
+#main img {
+    display: block;
+    margin: 28px auto 15px;
+}
+#detail {
+    width: 854px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 35px;
+}
+#detail p {
+    line-height: 28px;
+    font-size: 95%;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: right;
+}
+.info a {
+    color: red;
+}
+
+.reply {
+    font-size: 14px;
+}
+#reply-content {
+    width: 97%;
+}
+#reply-submit {
+    width: 100px;
+}
