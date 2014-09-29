@@ -33,7 +33,7 @@ body {
     margin: 0 auto;
     background: url("../image/background.png");
     font-size: 1em;
-    font-family: 微软雅黑, Arial;
+    font-family: "微软雅黑", Arial;
 }
 #header {
     margin-top: 15px;
@@ -261,7 +261,7 @@ body {
     zoom: 1;
 }
 #download li {
-    line-height; 19px;
+    line-height: 19px;
 }
 #footer div {
     display: inline-block;
@@ -382,4 +382,8 @@ body {
 
 .red {
     color: #CC0000;
+}
+
+.feedback a {
+    color: red;
 }

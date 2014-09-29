@@ -30,5 +30,17 @@
         <?php else: ?>
         <li><a href="<?=site_url('admin/config')?>"><i class="icon-pencil"></i> 系统设定</a></li>
         <?php endif; ?>
+
+        <?php if ($page == 'log'): ?>
+            <li class="active"><a href="<?=site_url('admin/log')?>"><i class="icon-pencil"></i> 管理日志</a></li>
+        <?php else: ?>
+            <li><a href="<?=site_url('admin/log')?>"><i class="icon-pencil"></i> 管理日志</a></li>
+        <?php endif; ?>
+
+        <?php if ($page == 'feedback'): ?>
+            <li class="active"><a href="<?=site_url('admin/feedback')?>"><i class="icon-pencil"></i> 用户反馈</a></li>
+        <?php else: ?>
+            <li><a href="<?=site_url('admin/feedback')?>"><i class="icon-pencil"></i> 用户反馈</a></li>
+        <?php endif; ?>
     </ul>
 </div><!--/.well -->

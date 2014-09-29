@@ -66,6 +66,8 @@ class Question extends Home_Controller {
         $question = $this->question_answer_model->get_question_by_id($question_id);
         $site_config = $this->site_config_model->get_config();
 
+        $this->log_model->insert($this->ion_auth->user()->row()->username, '回复了问题"'.$title.'"');
+
         if (!empty($question['author_email'])) {
             $this->email->from($this->config->item('from_email'), $this->config->item('from_email_name'));
             $this->email->to($question['author_email']);

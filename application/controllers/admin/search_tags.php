@@ -34,6 +34,7 @@ class Search_tags extends Admin_Controller {
         }
 
         $this->search_tags_model->create_search_tags($title);
+        $this->log_model->insert($this->ion_auth->user()->row()->username, '新建了搜索热词"'.$title.'"');
         echo json_content('success');
         $this->session->set_flashdata('success', '新建搜索热词成功');
     }
@@ -67,6 +68,9 @@ class Search_tags extends Admin_Controller {
     public function delete_search_tags() {
         $id = $this->input->get('id', TRUE);
         $id = intval($id);
+
+        $title = $this->search_tags_model->get_search_tags_title($id);
+        $this->log_model->insert($this->ion_auth->user()->row()->username, '删除了搜索热词"'.$title.'"');
 
         $this->search_tags_model->delete_search_tags($id);
         $this->session->set_flashdata('success', '删除搜索热词成功');

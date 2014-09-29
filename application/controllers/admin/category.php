@@ -34,6 +34,9 @@ class Category extends Admin_Controller {
         }
 
         $this->category_model->create_category($title);
+
+        $this->log_model->insert($this->ion_auth->user()->row()->username, '新建了分类"'.$title.'"');
+
         echo json_content('success');
         $this->session->set_flashdata('success', '新建分类成功');
     }
@@ -67,6 +70,9 @@ class Category extends Admin_Controller {
     public function delete_category() {
         $id = $this->input->get('id', TRUE);
         $id = intval($id);
+
+        $title = $this->category_model->get_category_title($id);
+        $this->log_model->insert($this->ion_auth->user()->row()->username, '删除了分类"'.$title.'"');
 
         $this->category_model->delete_category($id);
         $this->session->set_flashdata('success', '删除分类成功');

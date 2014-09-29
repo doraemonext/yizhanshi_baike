@@ -99,4 +99,26 @@ class Question_answer_model extends CI_Model {
     public function get_question_by_heat($limit = 10) {
         return $this->db->order_by('heat', 'desc')->get('question', $limit, 0)->result_array();
     }
+
+    public function get_question_by_datetime($limit = 10) {
+        return $this->db->order_by('datetime', 'desc')->get('question', $limit, 0)->result_array();
+    }
+
+    public function api_get_question($order, $from, $count, $search) {
+        $from = intval($from);
+        $count = intval($count);
+        if ($search) {
+            if ($order == 'heat') {
+                $sql = 'SELECT * FROM question WHERE title LIKE ? OR reply LIKE ? ORDER BY heat DESC LIMIT ?, ?';
+            } else {
+                $sql = 'SELECT * FROM question WHERE title LIKE ? OR reply LIKE ? ORDER BY datetime DESC LIMIT ?, ?';
+            }
+            $db = $this->db->query($sql, array('%'.$search.'%', '%'.$search.'%', $from, $count));
+            return $db->result_array();
+        } else {
+            $db = $this->db->order_by($order, 'desc');
+            $db = $db->get('question', $count, $from);
+            return $db->result_array();
+        }
+    }
 }

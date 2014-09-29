@@ -31,6 +31,8 @@
                 <span>点击数：<?= $question['heat'] ?></span>
                 &nbsp;&nbsp;
                 <span>发布时间: <?= $question['datetime'] ?></span>
+                &nbsp;&nbsp;
+                <span class="feedback"><a href="<?= site_url('feedback') . '/article/' . $question['id'] ?>">我要纠错</a></span>
             </div>
         </div>
         <div id="detail">

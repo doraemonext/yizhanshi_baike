@@ -34,6 +34,9 @@ class Problem extends Admin_Controller {
         $id = $this->input->get('id', TRUE);
         $id = intval($id);
 
+        $question = $this->question_answer_model->get_question_by_id($id);
+        $this->log_model->insert($this->ion_auth->user()->row()->username, '删除了问题"'.$question['title'].'"');
+
         $this->question_answer_model->delete_question($id);
     }
 }
