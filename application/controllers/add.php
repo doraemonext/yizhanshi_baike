@@ -51,7 +51,7 @@ class Add extends Home_Controller {
         } else {
             $content = strip_tags($content);
         }
-        if (strlen($content) > 200 && mb_strlen($content, 'utf-8') > strlen($content) / 2) {
+        if (mb_strlen($content, 'utf-8') > strlen($content) / 2) {
             echo json_content('error', '请不要发送垃圾信息');
             return;
         }
