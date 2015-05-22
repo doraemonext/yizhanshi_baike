@@ -7,8 +7,8 @@
         <div></div>
         <p>问题搜索</p>
     </div>
-    <div>
-        <div id="search-sidebar">
+    <div class="seek">
+        <div id="search-sidebar" class="head-search-sidebar">
             <?=form_open('search', array('class' => 'search', 'method' => 'get'))?>
                 <div>
                     <label for="category-box">请选择搜索分类：</label>
@@ -22,7 +22,7 @@
                 <br>
                 <div>
                     <label for="search-box">请输入搜索内容：</label>
-                    <input name="search" id="search-box" maxlength="60" type="text" />
+                    <input name="search" id="search-box" maxlength="60" type="text" placeholder="搜索问题" />
                 </div>
                 <br>
                 <div>

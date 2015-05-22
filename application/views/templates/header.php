@@ -7,7 +7,15 @@
                 <h1><a href="http://yzs.whu.edu.cn/"><?=$site_config['site_title']?></a></h1>
             </div>
         </div>
+        <div class="button-group">
+            <div class="fenlei"></div>
+            <div class="sousuo"></div>
+        </div>
+        <div class="ask-question1">
+            <a href="<?=site_url('add')?>" class="btn btn-default">我要提问</a>
+        </div>
     </div>
+
     <div id="navigation">
         <div id="menu">
             <ul id="nav-ul">
@@ -61,6 +69,9 @@
                 <input type="text" id="searchbox"/>
                 <input type="submit" id="searchbutton" value="搜索" />
             </form>
+        </div>
+        <div id="seek">
+            <input type="text" placeholder='搜索问题' name="seekproblem" value="" />
         </div>
     </div>
 </div>
