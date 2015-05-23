@@ -49,7 +49,7 @@
 	$('#seek-input').keyup(function(){
 		var search = $('#seek-input').val();
 		if (event.keyCode==13) {
-			window.location.href='http://localhost:8000/baike/index.php/search?search='+search;
+			window.location.href='/index.php/search?search='+search;
 		};
 	})
 })
