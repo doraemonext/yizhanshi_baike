@@ -22,7 +22,6 @@
 		}
 		else{
 			$('#nav-ul').hide();
-			
 		}
 	})
 	$('.sousuo').click(function(){
@@ -43,5 +42,22 @@
 		}
 		$('#seek').hide();
 	})
+	
+
+
+	
+	$('#seek-input').keyup(function(){
+		var search = $('#seek-input').val();
+		if (event.keyCode==13) {
+			window.location.href='http://localhost:8000/baike/index.php/search?search='+search;
+		};
+	})
 })
 
+var request = {
+	QueryString : function(val){
+		var uri = window.location.search; 
+		var re = new RegExp("" +val+ "=([^&?]*)", "ig"); 
+		return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null); 
+	}
+}

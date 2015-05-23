@@ -71,7 +71,7 @@
             </form>
         </div>
         <div id="seek">
-            <input type="text" placeholder='搜索问题' name="seekproblem" value="" />
+            <input type="text" id="seek-input" placeholder='搜索问题' name="seekproblem" value="" />
         </div>
     </div>
 </div>
